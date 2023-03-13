@@ -28,7 +28,6 @@
 | Name | Type |
 |------|------|
 | [null_resource.generated_key](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
-| [aws_ami.redhat-linux](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
 | [aws_ami.ubuntu-linux-2004](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
 | [http_http.myip](https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http) | data source |
 
@@ -42,4 +41,7 @@
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_ansible_controller_ssh"></a> [ansible\_controller\_ssh](#output\_ansible\_controller\_ssh) | n/a |
+| <a name="output_tomcat_servers"></a> [tomcat\_servers](#output\_tomcat\_servers) | n/a |

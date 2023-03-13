@@ -1,12 +1,12 @@
-# output "controller_ssh" {
-#   value = "ssh -i '${module.unique_name.unique}.pem' ubuntu@${module.jenkins.ip_address}"
-# }
+output "ansible_controller_ssh" {
+  value = "ssh -i '${module.unique_name.unique}.pem' ubuntu@${module.ansible_controller.ip_address}"
+}
 
-# output "tomcat_servers" {
-#   value = [
-#     for instance in module.tomcat : {
-#       "${instance.tags.Name}" = format("%s:%d", instance.ip_address, 8080)
-#     }
-#   ]
-# }
+output "tomcat_servers" {
+  value = [
+    for instance in module.worker : {
+      "${instance.tags.Name}" = "ssh -i '${module.unique_name.unique}.pem' ubuntu@${instance.ip_address}"
+    }
+  ]
+}
 
