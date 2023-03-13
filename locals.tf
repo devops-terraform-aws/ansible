@@ -1,16 +1,13 @@
 locals {
   name = "security-${var.name}"
   ec2_instance = [{
-    name = "1"
+    name = "worker-1"
     },
     {
-      name = "2"
+      name = "worker-2"
     },
     {
-      name = "3"
-    },
-    {
-      name = "4"
+      name = "worker-3"
     }
   ]
 }

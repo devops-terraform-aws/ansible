@@ -19,10 +19,9 @@ module "worker" {
   key_name        = module.aws_key.get_key_name
   instance_type   = "t2.micro"
   security_groups = module.security_group.security_name
-  name            = "worker-${each.value.name}-${var.name}"
-  # user_data       = templatefile("${path.module}/scripts/tomcat.sh.tftpl", { env = each.value.name })
-  user_data = ""
-  region    = var.region
+  name            = each.value.name
+  user_data       = templatefile("${path.module}/modules/scripts/worker.sh.tftpl", { env = each.value.name })
+  region          = var.region
 }
 
 module "aws_key" {
