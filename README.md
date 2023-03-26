@@ -1,3 +1,26 @@
+# Ansible Controller and Worker
+- The Ansible controller is a machine where Ansible is installed, and from which Ansible is run. Worker nodes are the machines that Ansible controls.
+## Setup Environment
+- Configure virtual environment on `Ubuntu WSL`
+```
+sudo ln -sf $(which python3) /usr/bin/python && sudo apt install python3-venv -y && sudo apt install unzip -y
+```
+```
+python --version
+```
+```
+python -m venv venv && source venv/bin/activate
+```
+
+## Automated Terraform Installation
+- Run `install-terraform.sh` and source `venv`
+```
+./install-terraform.sh 
+```
+```
+source venv/bin/activate
+```
+
 ## Requirements
 
 | Name | Version |
