@@ -1,1 +1,6 @@
+.*
+terraform.tfs*
+*.pem
 venv
+
+Microsoft Certified: Azure Developer Associate
